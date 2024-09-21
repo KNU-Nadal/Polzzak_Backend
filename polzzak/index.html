@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kakao Login</title>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script>
+      // 카카오 SDK 초기화
+      Kakao.init("482372b4316636d36d25ad331a4d3a98"); // 카카오 JavaScript 키 입력
+
+      function loginWithKakao() {
+        Kakao.Auth.authorize({
+          redirectUri: "http://polzzak-api.mojan.site/user",
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Kakao Login Page</h1>
+    <button onclick="loginWithKakao()">카카오로 로그인</button>
+  </body>
+</html>
